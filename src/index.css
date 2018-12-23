@@ -10,15 +10,28 @@ body {
   background: black;
 }
 
+
+.mlink{
+	text-decoration: none;
+	color: white;
+	transition: .5s;
+}
+
+.mlink:hover{
+	text-decoration: none;
+	color: #aaa;
+}
+
+
 @media screen and (max-width: 480px){
 
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
+@media screen and (min-width: 481px) and (max-width: 859px){
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px){
+@media screen and (min-width: 860px) and (max-width: 1200px){
 	.menu{
 		display: flex;
 		float: left;
@@ -30,13 +43,19 @@ body {
 		position: fixed;
     	top:0;
    		left: 0;
+   		text-align: center;
+   		flex-direction: column;
 	}
 
 	.menu img{
+		float: left;
 		width: 140px;
 		height: 69px;
-		margin-left: 10%;
-
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+		transition-delay: .3s;
+		text-align: center;
 	}
 	.corpo{
 		display: flex;
@@ -59,8 +78,6 @@ body {
 		display: none;
 	}
 
-	
-
 	#botaoM {
 		z-index: 1;
 		cursor: pointer;
@@ -75,7 +92,8 @@ body {
 	}
 
 	#check:checked ~ .menu img{
-		display: none;
+		width: 0;
+		transition-delay: -.3s;
 	}
 
 	#check:checked ~ .corpo{
@@ -83,10 +101,41 @@ body {
 		margin-left: 0px;
 	}
 
+	.navs{
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+		line-height: 40px;
+		font-size: 30px;
+		margin-top: 50%;
+		transition-delay: .3s;
+	}
+
+	.navs a{
+		border-bottom: .5px solid white;
+	}
+		.navs a:hover{border-bottom: .5px solid #aaa;}
+
+	#check:checked ~ .navs{
+		display: none;
+		transition-delay: -.3s;
+	}
+
+	#check:checked ~ .menu div.navs{
+		display: none;
+		transition-delay: -.3s;
+	}
 	
 }
 
 @media screen and (min-width: 1201px) {
+	
+	.app{
+		display: flex;
+		flex-direction: row;
+		width: 98.79vw;
+	}
+
 	.menu{
 		display: flex;
 		flex-direction: column;
@@ -100,12 +149,16 @@ body {
     	top:0;
    		left: 0;
    		text-align: center;
+   		vertical-align: middle;
 	}
 
 	.menu img{
 		width: 200px;
 		height: 98px;
-		margin-left: 10%;
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+		transition-delay: .3s;
 	}
 
 	.corpo{
@@ -118,18 +171,10 @@ body {
 		transition: .3s linear;
 	}
 
-	.app{
-		display: flex;
-		flex-direction: row;
-		width: 98.9vw;
-	}
-
 	#check{
 		position: absolute;
 		display: none;
 	}
-
-	
 
 	#botaoM {
 		z-index: 1;
@@ -146,7 +191,8 @@ body {
 	}
 
 	#check:checked ~ .menu img{
-		display: none;
+		width: 0;
+		transition-delay: -.3s;
 	}
 
 	#check:checked ~ .corpo{
@@ -154,6 +200,24 @@ body {
 		margin-left: 0px;
 	}
 
+	#check:checked ~ .menu div.navs{
+		display: none;
+		transition-delay: -.3s;
+	}
+
 	
+	.navs{
+		display: flex;
+		flex-direction: column;
+		padding: 25px;
+		line-height: 50px;
+		font-size: 30px;
+		margin-top: 40%;
+		transition-delay: .3s;
+	}
+	.navs a{
+		border-bottom: .5px solid white;
+	}
+		.navs a:hover{border-bottom: .5px solid #aaa;}
 
 }
