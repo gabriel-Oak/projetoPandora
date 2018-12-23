@@ -6,9 +6,154 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media screen and (max-width: 480px){
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+	.menu{
+		display: flex;
+		float: left;
+		background-image: linear-gradient(to bottom right, #800080, #200020 ); 
+		width: 20%; 
+		height: 100vh;
+		transition: .3s linear;
+		padding: 15px;
+		position: fixed;
+    	top:0;
+   		left: 0;
+	}
+
+	.menu img{
+		width: 140px;
+		height: 69px;
+		margin-left: 10%;
+
+	}
+	.corpo{
+		display: flex;
+		color: white;
+		background: black; 
+		width: 80%; 
+		height: 800px;
+		margin-left: 20%;
+		transition: .3s linear;
+	}
+
+	.app{
+		display: flex;
+		flex-direction: row;
+		width: 98.1vw;
+	}
+
+	#check{
+		position: absolute;
+		display: none;
+	}
+
+	
+
+	#botaoM {
+		z-index: 1;
+		cursor: pointer;
+		position: fixed;
+    	top:20px;
+    	left: 20px;
+	}
+
+	#check:checked ~ .menu{
+		width: 0;
+		padding: 0;
+	}
+
+	#check:checked ~ .menu img{
+		display: none;
+	}
+
+	#check:checked ~ .corpo{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	
+}
+
+@media screen and (min-width: 1201px) {
+	.menu{
+		display: flex;
+		flex-direction: column;
+		float: left;
+		background-image: linear-gradient(to bottom right, #800080, #200020 ); 
+		width: 20%; 
+		height: 100vh;
+		transition: .3s linear;
+		padding: 15px;
+		position: fixed;
+    	top:0;
+   		left: 0;
+   		text-align: center;
+	}
+
+	.menu img{
+		width: 200px;
+		height: 98px;
+		margin-left: 10%;
+	}
+
+	.corpo{
+		display: flex;
+		color: white;
+		background: black; 
+		width: 80%; 
+		height: 800px;
+		margin-left: 20%;
+		transition: .3s linear;
+	}
+
+	.app{
+		display: flex;
+		flex-direction: row;
+		width: 98.9vw;
+	}
+
+	#check{
+		position: absolute;
+		display: none;
+	}
+
+	
+
+	#botaoM {
+		z-index: 1;
+		cursor: pointer;
+		
+		position: fixed;
+    	top:20px;
+    	left: 20px;
+	}
+
+	#check:checked ~ .menu{
+		width: 0;
+		padding: 0;
+	}
+
+	#check:checked ~ .menu img{
+		display: none;
+	}
+
+	#check:checked ~ .corpo{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	
+
 }
