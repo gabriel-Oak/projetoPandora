@@ -1,13 +1,13 @@
 {
-  "main.css": "/projetoPandora/static/css/main.4dc89e5c.chunk.css",
-  "main.js": "/projetoPandora/static/js/main.6674e0da.chunk.js",
-  "main.js.map": "/projetoPandora/static/js/main.6674e0da.chunk.js.map",
+  "main.css": "/projetoPandora/static/css/main.db1eba47.chunk.css",
+  "main.js": "/projetoPandora/static/js/main.d3a3705a.chunk.js",
+  "main.js.map": "/projetoPandora/static/js/main.d3a3705a.chunk.js.map",
   "static/js/1.f739feb7.chunk.js": "/projetoPandora/static/js/1.f739feb7.chunk.js",
   "static/js/1.f739feb7.chunk.js.map": "/projetoPandora/static/js/1.f739feb7.chunk.js.map",
   "runtime~main.js": "/projetoPandora/static/js/runtime~main.744247de.js",
   "runtime~main.js.map": "/projetoPandora/static/js/runtime~main.744247de.js.map",
-  "static/css/main.4dc89e5c.chunk.css.map": "/projetoPandora/static/css/main.4dc89e5c.chunk.css.map",
+  "static/css/main.db1eba47.chunk.css.map": "/projetoPandora/static/css/main.db1eba47.chunk.css.map",
   "index.html": "/projetoPandora/index.html",
-  "precache-manifest.e280d9929ffc00bae6512ee7c6726d50.js": "/projetoPandora/precache-manifest.e280d9929ffc00bae6512ee7c6726d50.js",
+  "precache-manifest.912ae3e534a025017d7dd35beebfa020.js": "/projetoPandora/precache-manifest.912ae3e534a025017d7dd35beebfa020.js",
   "service-worker.js": "/projetoPandora/service-worker.js"
 }
