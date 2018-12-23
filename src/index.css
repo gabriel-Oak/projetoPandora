@@ -35,7 +35,7 @@ body {
 	.menu{
 		display: flex;
 		float: left;
-		background-image: linear-gradient(to bottom right, #800080, #200020 ); 
+		background-image: linear-gradient(to bottom right, #D00080, #200020 ); 
 		width: 20%; 
 		height: 100vh;
 		transition: .3s linear;
@@ -140,7 +140,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		float: left;
-		background-image: linear-gradient(to bottom right, #800080, #200020 ); 
+		background-image: linear-gradient(to bottom right, #D00080, #200020 ); 
 		width: 20%; 
 		height: 100vh;
 		transition: .3s linear;
