@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  overflow-x: hidden;
   background: black;
 }
 
@@ -19,15 +20,125 @@ body {
 
 .mlink:hover{
 	text-decoration: none;
-	color: #aaa;
+	color: #D00080;
 }
+
+.header{order: 1; background: #E0E0E0; width: 100vw; padding: 15px; }
 
 
 @media screen and (max-width: 480px){
+	.app{
+		display: flex;
+		flex-direction: column;
+	}
 
+	.menu img{display: none;}
+
+	.menu{
+		display: flex;
+		background-image: linear-gradient(to bottom right, #D00080, #200020 ); 
+		flex-direction: column;
+		width: 100vw;
+		order: 2;
+	}
+
+	.navs{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		line-height: 5px;
+		padding: 15px 20px;
+		font-size: 25px;
+
+	}
+		.navs a{padding: 20px;}
+
+		.navs a:hover{background: white;}
+	#botaoM{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+	#check{
+		position: absolute;
+		display: none;
+	}
+
+	#check:checked ~ .menu{
+		height: 0%;
+		padding: 0;
+	}
+
+	#check:checked ~ .menu div.navs{
+		display: none;
+		transition-delay: -.3s;
+	}
+
+	#check:checked ~ .menu div.navs{
+		display: none;
+		transition-delay: -.3s;
+	}
+
+	.header{height: 100px;}
 }
 
 @media screen and (min-width: 481px) and (max-width: 859px){
+
+	.app{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.menu img{display: none;}
+
+	.menu{
+		display: flex;
+		background-image: linear-gradient(to bottom right, #D00080, #200020 ); 
+		flex-direction: column;
+		width: 100vw;
+		order: 2;
+	}
+
+	.navs{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		line-height: 15px;
+		padding: 20px;
+		font-size: 25px;
+
+	}
+		.navs a{padding: 20px;}
+
+		.navs a:hover{background: white;}
+	#botaoM{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+	#check{
+		position: absolute;
+		display: none;
+	}
+
+	#check:checked ~ .menu{
+		height: 0%;
+		padding: 0;
+	}
+
+	#check:checked ~ .menu div.navs{
+		display: none;
+		transition-delay: -.3s;
+	}
+
+	#check:checked ~ .menu div.navs{
+		display: none;
+		transition-delay: -.3s;
+	}
+
+	.header{height: 200PX;}
 
 }
 
@@ -70,20 +181,7 @@ body {
 	.app{
 		display: flex;
 		flex-direction: row;
-		width: 98.1vw;
-	}
-
-	#check{
-		position: absolute;
-		display: none;
-	}
-
-	#botaoM {
-		z-index: 1;
-		cursor: pointer;
-		position: fixed;
-    	top:20px;
-    	left: 20px;
+		width: 100vw;
 	}
 
 	#check:checked ~ .menu{
@@ -105,16 +203,17 @@ body {
 		display: flex;
 		flex-direction: column;
 		padding: 15px;
-		line-height: 40px;
+		line-height: 60px;
 		font-size: 30px;
-		margin-top: 50%;
+		margin-top: auto;
+		margin-bottom: auto;
 		transition-delay: .3s;
 	}
 
 	.navs a{
 		border-bottom: .5px solid white;
 	}
-		.navs a:hover{border-bottom: .5px solid #aaa;}
+		.navs a:hover{border-bottom: .5px solid #D00080;}
 
 	#check:checked ~ .navs{
 		display: none;
@@ -125,6 +224,21 @@ body {
 		display: none;
 		transition-delay: -.3s;
 	}
+
+	#check{
+		position: absolute;
+		display: none;
+	}
+
+	#botaoM {
+		z-index: 1;
+		cursor: pointer;
+		position: fixed;
+		top:20px;
+		left: 20px;
+	}
+
+	.header{height: 200PX;}
 	
 }
 
@@ -133,7 +247,7 @@ body {
 	.app{
 		display: flex;
 		flex-direction: row;
-		width: 98.79vw;
+		width: 100vw;
 	}
 
 	.menu{
@@ -171,19 +285,7 @@ body {
 		transition: .3s linear;
 	}
 
-	#check{
-		position: absolute;
-		display: none;
-	}
-
-	#botaoM {
-		z-index: 1;
-		cursor: pointer;
-		
-		position: fixed;
-    	top:20px;
-    	left: 20px;
-	}
+	
 
 	#check:checked ~ .menu{
 		width: 0;
@@ -210,14 +312,29 @@ body {
 		display: flex;
 		flex-direction: column;
 		padding: 25px;
-		line-height: 50px;
+		line-height:60px;
 		font-size: 30px;
-		margin-top: 40%;
+		margin-top: auto;
+		margin-bottom: auto;
 		transition-delay: .3s;
 	}
 	.navs a{
 		border-bottom: .5px solid white;
 	}
-		.navs a:hover{border-bottom: .5px solid #aaa;}
+		.navs a:hover{border-bottom: .5px solid #D00080;}
 
+	#check{
+		position: absolute;
+		display: none;
+	}
+
+	#botaoM {
+		z-index: 1;
+		cursor: pointer;
+		position: fixed;
+		top:20px;
+		left: 20px;
+	}
+
+	.header{height: 200PX;}
 }
