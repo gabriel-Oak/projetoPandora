@@ -1,5 +1,6 @@
 import React, { Component, } from 'react';
-import Header from './Header';
+import Header from './corpo/Header';
+import Main from './corpo/Main';
 
 class Corpo extends Component {
     
@@ -7,6 +8,7 @@ class Corpo extends Component {
         return (
             <div className="corpo">
             	<Header />
+            	<Main />
             </div>
         );
     }
