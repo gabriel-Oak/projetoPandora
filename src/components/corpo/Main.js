@@ -1,36 +1,12 @@
 import React, { Component } from 'react';
+import Baner from './main/Baner';
 
 class Main extends Component {
     
     render() {
         return (
             <div className="main">
-            	<h2>Slide</h2>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
-            	Teste<br/>Teste<br/>Teste<br/>
+            	<Baner />
             </div>
         );
     }

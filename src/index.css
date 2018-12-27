@@ -23,18 +23,15 @@ body {
 	color: #D00080;
 }
 
-.header{box-shadow: 0 5px 20px #505050; background: #E0E0E0; width: 100vw; padding: 15px; height: 150px;}
+.header{background: #E0E0E0; width: 100vw; padding: 15px; height: 150px;}
 
-.main{
-		padding: 20px;
-		color: #bbb
-	}
-
+.main{color: #bbb;}
 		.main h2{
 			text-align: center;
 			color: #D000A0;
 		}
 
+#inicio{margin-bottom: 30px;}
 
 @media screen and (max-width: 480px){
 	.app{
@@ -50,7 +47,8 @@ body {
 		flex-direction: column;
 		width: 100vw;
 		position: absolute;
-		top: 150px;
+		top: 100px;
+		z-index: 2;
 	}
 
 	.navs{
@@ -110,6 +108,7 @@ body {
 		width: 100vw;
 		position: absolute;
 		top: 150px;
+		z-index: 2;
 	}
 
 	.navs{
@@ -181,6 +180,7 @@ body {
 	}
 	.corpo{
 		display: flex;
+		flex-direction: column;
 		color: white;
 		background: black; 
 		width: 80%; 
@@ -289,8 +289,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		width: 80%; 
-		height: 800px;
-		margin-left: 19.5%;
+		margin-left: 19.85%;
 		transition: .3s linear;
 	}
 
