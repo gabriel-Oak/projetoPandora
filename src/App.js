@@ -6,6 +6,8 @@ import Menu from './components/Menu';
 //Materials
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 
 
 class App extends Component {
@@ -16,20 +18,39 @@ class App extends Component {
   }
 
   render() {
+
+    const tema = createMuiTheme({
+      palette: {
+        primary: {
+          main: '#6a1b9a',
+          dark: '#4a126b',
+          contrastText: '#fff',
+        },
+        secondary: {
+          main: '#f50057',
+          dark: '#ab003c',
+          contrastText: '#fff',
+        },
+      }
+    });
+
+
     return (
-      <div className="app">
+      <MuiThemeProvider theme={tema}>
+        <div className="app">
 
-        <input type="checkbox" id="check"/>
-        <label id="botaoM" for="check">
-          <IconButton className="iconeMenu" color="inherit" for="check" aria-label="Menu" onClick={this.toggleMenu.bind(this)}>
-            <MenuIcon />
-          </IconButton>
-        </label>
-        
+          <input type="checkbox" id="check"/>
+          <label id="botaoM" for="check">
+            <IconButton className="iconeMenu" color="inherit" aria-label="Menu" onClick={this.toggleMenu.bind(this)}>
+              <MenuIcon />
+            </IconButton>
+          </label>
+          
 
-        <Menu />
-        <Corpo />
-      </div>
+          <Menu />
+          <Corpo />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

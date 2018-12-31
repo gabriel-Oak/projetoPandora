@@ -8,7 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   overflow-x: hidden;
-  background: black;
+  background: #111;
 }
 
 .mlink{
@@ -27,8 +27,13 @@ body {
 .main{color: #bbb;}
 		.main h2{
 			text-align: center;
-			color: #D000A0;
 		}
+
+#contato{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
 
 #inicio{margin-bottom: 30px;}
 
@@ -41,12 +46,12 @@ body {
 	.menu img{display: none;}
 
 	.menu{
-		display: flex;
+		display: none;
 		background-image: linear-gradient(to bottom right, #D00080, #200020 ); 
 		flex-direction: column;
 		width: 100vw;
-		position: absolute;
-		top: 100px;
+		position: fixed;
+		top: 0;
 		z-index: 2;
 	}
 
@@ -64,9 +69,10 @@ body {
 
 		.navs a:hover{background: white;}
 	#botaoM{
-		position: absolute;
+		position: fixed;
 		right: 20px;
 		top: 20px;
+		z-index: 3;
 	}
 	#check{
 		position: absolute;
@@ -74,19 +80,10 @@ body {
 	}
 
 	#check:checked ~ .menu{
-		height: 0%;
-		padding: 0;
+		display: flex;
 	}
 
-	#check:checked ~ .menu div.navs{
-		display: none;
-		transition-delay: -.3s;
-	}
-
-	#check:checked ~ .menu div.navs{
-		display: none;
-		transition-delay: -.3s;
-	}
+	
 
 	.header{height: 100px;}
 }
@@ -101,12 +98,12 @@ body {
 	.menu img{display: none;}
 
 	.menu{
-		display: flex;
+		display: none;
 		background-image: linear-gradient(to bottom right, #D00080, #200020 ); 
 		flex-direction: column;
 		width: 100vw;
-		position: absolute;
-		top: 150px;
+		position: fixed;
+		top: 00px;
 		z-index: 2;
 	}
 
@@ -124,7 +121,8 @@ body {
 
 		.navs a:hover{background: white;}
 	#botaoM{
-		position: absolute;
+		position: fixed;
+		z-index: 3;
 		right: 20px;
 		top: 20px;
 	}
@@ -134,19 +132,15 @@ body {
 	}
 
 	#check:checked ~ .menu{
-		height: 0%;
-		padding: 0;
+		display: flex;
 	}
 
 	#check:checked ~ .menu div.navs{
-		display: none;
-		transition-delay: -.3s;
+		display: flex;
 	}
 
-	#check:checked ~ .menu div.navs{
-		display: none;
-		transition-delay: -.3s;
-	}
+
+
 
 
 }
@@ -181,9 +175,8 @@ body {
 		display: flex;
 		flex-direction: column;
 		color: white;
-		background: black; 
+		background: #111; 
 		width: 80%; 
-		height: 800px;
 		margin-left: 19.8%;
 		transition: .3s linear;
 	}
@@ -341,6 +334,10 @@ body {
 		position: fixed;
 		top:20px;
 		left: 20px;
+	}
+
+	#contato{
+
 	}
 
 

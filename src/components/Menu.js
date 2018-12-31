@@ -12,7 +12,7 @@ class Menu extends Component {
             		<AnchorLink href='#inicio' className="mlink">Inicio</AnchorLink>
             		<a href="#" className="mlink">Link 2</a>
             		<a href="#" className="mlink">Link 3</a>
-            		<a href="#" className="mlink">Link 4</a>
+            		<AnchorLink href="#contato" className="mlink">Contato</AnchorLink>
             	</div>
             </div>
         );
