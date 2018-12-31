@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/projetoPandora/precache-manifest.45292d77948adef42fd778223fdda714.js"
+  "/projetoPandora/precache-manifest.f6d572456b4ddec5c0304a9b4c143720.js"
 );
 
 workbox.clientsClaim();
