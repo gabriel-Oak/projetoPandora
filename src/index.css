@@ -22,7 +22,7 @@ body {
 	color: #D00080;
 }
 
-.header{background: #E0E0E0; width: 100vw; padding: 15px; height: 150px;}
+.header{background: #E0E0E0;  padding: 15px; height: 150px;}
 
 .main{color: #bbb;}
 		.main h2{
@@ -58,7 +58,6 @@ body {
 	.navs{
 		display: flex;
 		flex-direction: column;
-		width: 100%;
 		text-align: center;
 		line-height: 5px;
 		padding: 15px 20px;
@@ -70,8 +69,8 @@ body {
 		.navs a:hover{background: white;}
 	#botaoM{
 		position: fixed;
-		right: 20px;
-		top: 20px;
+		right: 10px;
+		top: 10px;
 		z-index: 3;
 	}
 	#check{
@@ -93,6 +92,7 @@ body {
 	.app{
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 	}
 
 	.menu img{display: none;}
@@ -101,7 +101,7 @@ body {
 		display: none;
 		background-image: linear-gradient(to bottom right, #D00080, #200020 ); 
 		flex-direction: column;
-		width: 100vw;
+		width: 100%;
 		position: fixed;
 		top: 00px;
 		z-index: 2;
@@ -120,11 +120,15 @@ body {
 		.navs a{padding: 20px;}
 
 		.navs a:hover{background: white;}
+
+	.corpo{
+		width: 100%;
+	}
 	#botaoM{
 		position: fixed;
 		z-index: 3;
-		right: 20px;
-		top: 20px;
+		right: 10px;
+		top: 10px;
 	}
 	#check{
 		position: absolute;
@@ -138,9 +142,6 @@ body {
 	#check:checked ~ .menu div.navs{
 		display: flex;
 	}
-
-
-
 
 
 }

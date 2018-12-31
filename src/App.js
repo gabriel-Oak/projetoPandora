@@ -41,7 +41,7 @@ class App extends Component {
 
           <input type="checkbox" id="check"/>
           <label id="botaoM" for="check">
-            <IconButton className="iconeMenu" color="inherit" aria-label="Menu" onClick={this.toggleMenu.bind(this)}>
+            <IconButton className="iconeMenu" color="primary" aria-label="Menu" onClick={this.toggleMenu.bind(this)}>
               <MenuIcon />
             </IconButton>
           </label>
