@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Baner from './main/Baner';
 import Contato from './main/Contato';
-
+import Sobre from './main/Sobre';
 
 class Main extends Component {
     
@@ -9,6 +9,9 @@ class Main extends Component {
         return (
             <div className="main">
             	<Baner />
+            	<Sobre />
+
+
             		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             		
             	<Contato />

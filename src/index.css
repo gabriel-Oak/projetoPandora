@@ -35,7 +35,7 @@ body {
 	flex-direction: column;
 }
 
-#inicio{margin-bottom: 30px;}
+#inicio{margin-bottom: 300px;}
 
 @media screen and (max-width: 480px){
 	.app{
@@ -85,6 +85,16 @@ body {
 	
 
 	.header{height: 100px;}
+
+	#contato{
+
+	}
+
+	#sobre{padding: 20px;}
+	.textoEsquerda {
+		text-align: justify;
+		text-indent: 30px;
+	}
 }
 
 @media screen and (min-width: 481px) and (max-width: 859px){
@@ -143,7 +153,15 @@ body {
 		display: flex;
 	}
 
+	#contato{
 
+	}
+
+	#sobre{padding: 20px;}
+	.textoEsquerda {
+		text-align: justify;
+		text-indent: 50px;
+	}
 }
 
 @media screen and (min-width: 860px) and (max-width: 1200px){
@@ -242,7 +260,16 @@ body {
 		left: 20px;
 	}
 
-	
+	#contato{
+
+	}
+
+	#sobre{padding: 20px;}
+	.textoEsquerda {
+		width: 60%;
+		text-align: justify;
+		text-indent: 50px;
+	}
 }
 
 @media screen and (min-width: 1201px) {
@@ -341,5 +368,11 @@ body {
 
 	}
 
+	#sobre{padding: 20px;}
+	.textoEsquerda {
+		width: 50%;
+		text-align: justify;
+		text-indent: 50px;
+	}
 
 }

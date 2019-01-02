@@ -10,7 +10,7 @@ class Menu extends Component {
             	
             	<div className="navs">
             		<AnchorLink href='#inicio' className="mlink">Inicio</AnchorLink>
-            		<a href="#" className="mlink">Link 2</a>
+            		<AnchorLink href='#sobre' className="mlink">Sobre Nos</AnchorLink>
             		<a href="#" className="mlink">Link 3</a>
             		<AnchorLink href="#contato" className="mlink">Contato</AnchorLink>
             	</div>
