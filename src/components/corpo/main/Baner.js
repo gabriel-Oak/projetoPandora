@@ -21,7 +21,7 @@ class Baner extends Component {
     ]
  
     return (
-    	<div id="inicio">	
+    	<div className="baner">	
 	      <ImageGallery items={images} 
 	      				autoPlay={true} 
 	      				showNav={false} 

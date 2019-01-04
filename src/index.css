@@ -22,7 +22,6 @@ body {
 	color: #D00080;
 }
 
-.header{background: #E0E0E0;  padding: 15px; height: 150px;}
 
 .main{color: #bbb;}
 		.main h2{
@@ -35,7 +34,7 @@ body {
 	flex-direction: column;
 }
 
-#inicio{margin-bottom: 300px;}
+#sobre{margin-top: 300px;}
 
 @media screen and (max-width: 480px){
 	.app{
@@ -84,7 +83,24 @@ body {
 
 	
 
-	.header{height: 100px;}
+	.header{background: #E0E0E0;  padding: 15px; height: 100px;}
+
+	.headertxt {
+		position: absolute;
+		color: #fff;
+		top: 150px;
+	}
+
+	.headertxt h1{
+			font-size: 30px;
+		}
+
+		.headertxt h2{
+			font-size: 18px;
+			margin-right: 5%;
+			margin-left: 5%;
+			text-align: justify;
+		}
 
 	#contato{
 
@@ -94,7 +110,10 @@ body {
 	.textoEsquerda {
 		text-align: justify;
 		text-indent: 30px;
+		margin-left: 0 20px;
 	}
+
+
 }
 
 @media screen and (min-width: 481px) and (max-width: 859px){
@@ -161,7 +180,27 @@ body {
 	.textoEsquerda {
 		text-align: justify;
 		text-indent: 50px;
+		margin-left: 0 20px;
 	}
+		.header{background: #F0F0F0;  padding: 15px; height: 150px;}
+
+	.headertxt {
+		position: absolute;
+		color: #fff;
+		top: 150px;
+	}
+
+	.headertxt h1{
+			font-size: 30px;
+		}
+
+		.headertxt h2{
+			font-size: 18px;
+			margin-right: 38%;
+			margin-left: 5%;
+			text-align: justify;
+		}
+
 }
 
 @media screen and (min-width: 860px) and (max-width: 1200px){
@@ -232,10 +271,11 @@ body {
 		transition-delay: .3s;
 	}
 
-	.navs a{
+	.mlink{
 		border-bottom: .5px solid white;
+		font-size: 20px;
 	}
-		.navs a:hover{border-bottom: .5px solid #D00080;}
+		.mlink:hover{border-bottom: .5px solid #D00080;}
 
 	#check:checked ~ .navs{
 		display: none;
@@ -259,6 +299,25 @@ body {
 		top:20px;
 		left: 20px;
 	}
+
+	.headertxt {
+		position: absolute;
+		color: #fff;
+		top: 70px;
+		margin-left:40px;
+	}
+
+		.headertxt h1{
+			font-size: 40px;
+			line-height: 90px;
+		}
+
+		.headertxt h2{
+			font-size: 20px;
+			margin-right: 40%;
+			margin-left: 5%;
+			text-align: justify;
+		}
 
 	#contato{
 
@@ -335,6 +394,10 @@ body {
 		transition-delay: -.3s;
 	}
 
+	#check:checked ~ .header h1{
+		font-size: 90px;
+		transition-delay: -.3s;
+	}
 	
 	.navs{
 		display: flex;
@@ -363,6 +426,26 @@ body {
 		top:20px;
 		left: 20px;
 	}
+
+	.headertxt {
+		position: absolute;
+		color: #fff;
+		top: 100px;
+		margin-left:40px;
+	}
+
+		.headertxt h1{
+			font-size: 70px;
+			line-height: 90px;
+		}
+
+		.headertxt h2{
+			font-size: 25px;
+			margin-right: 40%;
+			margin-left: 10%;
+			text-align: justify;
+		}
+
 
 	#contato{
 

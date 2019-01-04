@@ -8,7 +8,7 @@ class Main extends Component {
     render() {
         return (
             <div className="main">
-            	<Baner />
+            	
             	<Sobre />
 
 
@@ -21,3 +21,4 @@ class Main extends Component {
 }
 
 export default Main;
+//<Baner />
