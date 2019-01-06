@@ -59,7 +59,7 @@ class Contato extends Component {
 
     render() {
         return (
-            <div id="contato">
+            <div id="contato" style={{marginBottom: 300, marginTop: 600}}>
             	<Typography component="h2" variant="display3" color="inherit">
 		          Entre em contato conosco
 		        </Typography>

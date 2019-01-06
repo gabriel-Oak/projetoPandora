@@ -19,15 +19,12 @@ class HeaderDesk extends Component {
             	<picture>
             		<div className="headertxt">
             			<h1 >
-					        Aqui seu sonho ganha força
+					        Conosco seu sonho ganha força
 					    </h1>
 					    <h2 >
-					        Independente se ele é considerado
-					        maluco, diferente, inovador, ou
-					        um negocio tradicional, que vai ser
-					        seu foguete para o sucesso, acreditamos
-					        nele e queremos te ajudar a chegar la...
+					        Independente se ele é considerado maluco, diferente, inovador, ou um negócio tradicional,  transformamos ele em seu foguete para o sucesso, acreditamos nele e vamos te ajudar a chegar lá...
 					    </h2>
+
 					</div>
             		<img src={process.env.PUBLIC_URL + "/img/Watching-the-Stars.png"} style={styles.Img}/>
             	</picture>

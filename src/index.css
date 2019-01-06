@@ -34,8 +34,6 @@ body {
 	flex-direction: column;
 }
 
-#sobre{margin-top: 300px;}
-
 @media screen and (max-width: 480px){
 	.app{
 		display: flex;
@@ -113,6 +111,18 @@ body {
 		margin-left: 0 20px;
 	}
 
+	.textoDireita {
+		text-align: justify;
+		text-indent: 30px;
+		margin: 0 20px;
+	}
+
+	.footer{
+		margin-top: -100px;
+		height: 100px;
+		background-color: #222;
+	}
+
 
 }
 
@@ -182,6 +192,13 @@ body {
 		text-indent: 50px;
 		margin-left: 0 20px;
 	}
+
+	.textoDireita {
+		text-align: justify;
+		text-indent: 50px;
+		margin-left: 0 20px;
+	}
+
 		.header{background: #F0F0F0;  padding: 15px; height: 150px;}
 
 	.headertxt {
@@ -200,6 +217,11 @@ body {
 			margin-left: 5%;
 			text-align: justify;
 		}
+			.footer{
+		height: 150px;
+		background-color: #222;
+	}
+
 
 }
 
@@ -329,6 +351,20 @@ body {
 		text-align: justify;
 		text-indent: 50px;
 	}
+	
+	.textoDireita {
+		float: right;
+		width: 50%;
+		text-align: justify;
+		text-indent: 50px;
+		margin-right: 10px;
+	}
+
+		.footer{
+		height: 150px;
+		background-color: #222;
+	}
+
 }
 
 @media screen and (min-width: 1201px) {
@@ -456,6 +492,19 @@ body {
 		width: 50%;
 		text-align: justify;
 		text-indent: 50px;
+	}
+
+	#servicos{padding: 20px;}
+	.textoDireita {
+		float: right;
+		width: 50%;
+		text-align: justify;
+		text-indent: 50px;
+		margin-right: 10px;
+	}
+
+	.footer{
+		background-color: #222;
 	}
 
 }

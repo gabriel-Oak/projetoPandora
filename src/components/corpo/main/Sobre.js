@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
 
-const styles = {
-	Typography: {
-		marginTop: 20,
-		marginBottom: 20,
-	}
-}
+
 
 class Sobre extends Component {
     
 
     render() {
         return (
-            <div id="sobre">
+            <div id="sobre" style={this.props.styles.Divs}>
             	<div className="titulo">
-            	<Typography style={styles.Typography} component="h2" variant="display3" color="inherit">
+            	<Typography style={this.props.styles.Typography} component="h2" variant="display3" color="inherit">
 		           Um pouco sobre nos...
 		        </Typography>
 		        </div>

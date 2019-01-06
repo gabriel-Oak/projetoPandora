@@ -82,16 +82,12 @@ class Header extends Component {
                           <ExpansionPanel style={{backgroundColor:"rgba(0,0,0,0)"}} expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
                               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon color="primary" />}>
                                  <h1 >
-                                    Aqui seu sonho ganha força
+                                    Conosco seu sonho ganha força
                                 </h1>
                               </ExpansionPanelSummary>
                               <ExpansionPanelDetails>
                                 <h2 >
-                                    Independente se ele é considerado
-                                    maluco, diferente, inovador, ou
-                                    um negocio tradicional, que vai ser
-                                    seu foguete para o sucesso, acreditamos
-                                    nele e queremos te ajudar a chegar la...
+                                    Independente se ele é considerado maluco, diferente, inovador, ou um negócio tradicional,  transformamos ele em seu foguete para o sucesso, acreditamos nele e vamos te ajudar a chegar lá...
                                 </h2>
                               </ExpansionPanelDetails>
                           </ExpansionPanel>
@@ -107,21 +103,3 @@ class Header extends Component {
 }
 
 export default Header;
-/*<MuiThemeProvider theme={th}>
-                  <ExpansionPanel style={{backgroundColor:"#222"}} expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
-                      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon color="primary" />}>
-                         <h1 >
-                            Aqui seu sonho ganha força
-                        </h1>
-                      </ExpansionPanelSummary>
-                      <ExpansionPanelDetails>
-                        <h2 >
-                            Independente se ele é considerado
-                            maluco, diferente, inovador, ou
-                            um negocio tradicional, que vai ser
-                            seu foguete para o sucesso, acreditamos
-                            nele e queremos te ajudar a chegar la...
-                        </h2>
-                      </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                </MuiThemeProvider>*/
