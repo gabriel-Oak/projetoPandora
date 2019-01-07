@@ -32,6 +32,10 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
+function sendEmail(){
+		document.getElementById("contatoForm").submit();
+	}
+
 class Contato extends Component {
     
 	state = {
@@ -56,6 +60,14 @@ class Contato extends Component {
 	handleClose = () => {
 		this.setState({ open: false });
 	};
+
+	
+
+	validateForm = () => {
+		if (true) {
+			sendEmail();
+		}
+	}
 
     render() {
         return (
@@ -84,9 +96,10 @@ class Contato extends Component {
 	            	  <DialogContent>
 	            	    <DialogContentText id="alert-dialog-slide-description">
 	            	      
-	            	    	<form noValidate autoComplete="off" style={{display:'flex', flexDirection:'column'}}>
+	            	    	<form id="contatoForm" noValidate autoComplete="off" style={{display:'flex', flexDirection:'column'}} 
+	            	    	method="post" action={process.env.PUBLIC_URL + "/controllers/controllerForm.php"}>
 			        			<TextField
-									id="standard-name"
+									name="nome"
 									label="Nome"
 									value={this.state.nome}
 									onChange={this.handleChange('nome')}
@@ -94,7 +107,7 @@ class Contato extends Component {
 									/>
 
 									<TextField
-									id="standard-email"
+									name="email"
 									label="Email"
 									value={this.state.email}
 									onChange={this.handleChange('email')}
@@ -102,7 +115,7 @@ class Contato extends Component {
 									/>
 
 									<TextField
-									id="tel"
+									name="tel"
 									label="Telefone"
 									value={this.state.tel}
 									onChange={this.handleChange('tel')}
@@ -111,7 +124,7 @@ class Contato extends Component {
 									/>
 
 									<TextField
-									id="empresa"
+									name="empresa"
 									label="Empresa"
 									value={this.state.empresa}
 									onChange={this.handleChange('empresa')}
@@ -121,7 +134,7 @@ class Contato extends Component {
 									<TextField
 									multiline
 									rowsMax="5"
-									id="mensagem"
+									name="mensagem"
 									label="Mensagem"
 									value={this.state.mensagem}
 									onChange={this.handleChange('mensagem')}
@@ -135,7 +148,7 @@ class Contato extends Component {
 	            	    <Button onClick={this.handleClose} color="secondary">
 	            	      Cancelar
 	            	    </Button>
-	            	    <Button color="primary">
+	            	    <Button color="primary" onClick={this.validateForm}>
 	            	      Enviar
 	            	    </Button>
 	            	  </DialogActions>
