@@ -18,7 +18,7 @@ $messageUser = filter_input(type: INPUT_POST, variable_name: "mensagem", filter:
  &mail = new \PHPMailer\PHPMailer\PHPMailer();
 
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->isSMTP();                                      // Configura o mailer a usar SMTP
     $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'user@example.com';                 // SMTP username

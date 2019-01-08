@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/projetoPandora/static/js/runtime~main.744247de.js"
   },
   {
-    "revision": "0d6ab36fcac12ac39a7b",
-    "url": "/projetoPandora/static/js/main.0d6ab36f.chunk.js"
+    "revision": "2227a1f0caabfccf77d8",
+    "url": "/projetoPandora/static/js/main.2227a1f0.chunk.js"
   },
   {
     "revision": "84641b4538ef19c9944f",
     "url": "/projetoPandora/static/js/1.84641b45.chunk.js"
   },
   {
-    "revision": "0d6ab36fcac12ac39a7b",
-    "url": "/projetoPandora/static/css/main.58a4a1de.chunk.css"
+    "revision": "2227a1f0caabfccf77d8",
+    "url": "/projetoPandora/static/css/main.3d99b333.chunk.css"
   },
   {
     "revision": "84641b4538ef19c9944f",
     "url": "/projetoPandora/static/css/1.1186eb2f.chunk.css"
   },
   {
-    "revision": "8f67a7b7b36c6f0a349ab73d8f5c10e4",
+    "revision": "91f13a6998c9427c39010477f4ac3123",
     "url": "/projetoPandora/index.html"
   }
 ];
