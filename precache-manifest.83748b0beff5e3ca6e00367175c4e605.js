@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/projetoPandora/static/js/runtime~main.744247de.js"
   },
   {
-    "revision": "6941f17e7a9975b66efc",
-    "url": "/projetoPandora/static/js/main.6941f17e.chunk.js"
+    "revision": "60538a6306b89b5a4837",
+    "url": "/projetoPandora/static/js/main.60538a63.chunk.js"
   },
   {
     "revision": "61ffda22261383d7ca51",
     "url": "/projetoPandora/static/js/1.61ffda22.chunk.js"
   },
   {
-    "revision": "6941f17e7a9975b66efc",
+    "revision": "60538a6306b89b5a4837",
     "url": "/projetoPandora/static/css/main.84091165.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/projetoPandora/static/css/1.53982ce0.chunk.css"
   },
   {
-    "revision": "faef8f307dc81f6b36f141940d6d5c2c",
+    "revision": "9c5399dfb52c4fa5ab1998f721a4a36f",
     "url": "/projetoPandora/index.html"
   }
 ];
