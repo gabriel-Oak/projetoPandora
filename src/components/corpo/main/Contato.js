@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import MaskedInput from 'react-text-mask';
+
 import axios from 'axios';
+
+import ErrorSnack from './ErrorSnack';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -10,6 +13,22 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import Typography from '@material-ui/core/Typography';
+
+
+function preenchido(value) {
+	if (value != '' && value != null) {
+		return true;
+	}
+
+	return false;
+}
+
+function isEmail(value) {
+  if (!/@/g.test(value) || !/.com/g.test(value)) {
+    return false;
+  } else if (preenchido(value)){return true;}
+ return false;
+};
 
 function TextMaskCustom(props) {
   const { inputRef, ...other } = props;
@@ -48,6 +67,7 @@ class Contato extends Component {
     
 	state = {
     	open: false,
+    	erro: false,
     	nome: '',
     	email: '',
     	empresa: '',
@@ -58,6 +78,7 @@ class Contato extends Component {
 	resetForm(){
 		this.setState({
       		open: false,
+      		erro: false,
 	    	nome: '',
 	    	email: '',
 	    	empresa: '',
@@ -83,22 +104,31 @@ class Contato extends Component {
 	
 
 	validateForm = () => {
-		if (true) {
-			const nome = document.getElementById('nome').value;
-	        const email = document.getElementById('email').value;
-	        const tel = document.getElementById('tel').value;
-	        const emp = document.getElementById('empresa').value;
-	        const mensagem = document.getElementById('mensagem').value;
-			const data = {
-		                nome: nome,   
-		                email: email,  
-		                tel: tel,
-		                emp: emp,
-		                mensagem: mensagem
-		             }
-			sendEmail(data);
-			this.resetForm();
-		}
+		const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const tel = document.getElementById('tel').value;
+        const emp = document.getElementById('empresa').value;
+        const mensagem = document.getElementById('mensagem').value;
+
+		if (preenchido(nome)) {
+			if (isEmail(email)) {
+				if (tel != "(  )     -     ") {
+					if (preenchido(emp)) {
+							if (preenchido(mensagem)) {
+							const data = {
+							                nome: nome,   
+							                email: email,  
+							                tel: tel,
+							                emp: emp,
+							                mensagem: mensagem
+						 				 }
+							sendEmail(data);
+							this.resetForm();
+						} else{alert("Mensagem Vazia!");}
+					} else{alert("Qual é a empresa?");}
+				} else{alert("Informe um numero telefônico!");}
+			} else{alert("Email invalido!");}
+		} else{alert("Nome não preenchido!"); this.setState({ erro: true });}
 	}
     
 
@@ -132,6 +162,7 @@ class Contato extends Component {
 	            	    <DialogContentText id="alert-dialog-slide-description">
 	            	      
 	            	    	<form id="contatoForm" noValidate autoComplete="off" style={{display:'flex', flexDirection:'column'}} >
+			        			<ErrorSnack estado={this.state.erro}/>
 			        			<TextField
 			        				id="nome"
 									name="nome"
