@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MaskedInput from 'react-text-mask';
-
+import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -32,9 +32,17 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-function sendEmail(){
-		document.getElementById("contatoForm").submit();
+function sendEmail(data){
+		
+	 	axios.post('https://mailer-pandora.herokuapp.com/send',data).then((response)=>{
+            if (response.data.msg === 'success'){
+                alert("Sua mensagem foi enviada"); 
+            }else if(response.data.msg === 'fail'){
+                alert("Oops alguma coisa deu errado ao enviar!")
+            }
+        });
 	}
+
 
 class Contato extends Component {
     
@@ -46,6 +54,17 @@ class Contato extends Component {
     	mensagem: '',
     	tel: '( )    -     ',
 };
+
+	resetForm(){
+		this.setState({
+      		open: false,
+	    	nome: '',
+	    	email: '',
+	    	empresa: '',
+	    	mensagem: '',
+	    	tel: '( )    -     ',
+    	});
+    }
 
  	handleChange = name => event => {
     	this.setState({
@@ -65,11 +84,27 @@ class Contato extends Component {
 
 	validateForm = () => {
 		if (true) {
-			sendEmail();
+			const nome = document.getElementById('nome').value;
+	        const email = document.getElementById('email').value;
+	        const tel = document.getElementById('tel').value;
+	        const emp = document.getElementById('empresa').value;
+	        const mensagem = document.getElementById('mensagem').value;
+			const data = {
+		                nome: nome,   
+		                email: email,  
+		                tel: tel,
+		                emp: emp,
+		                mensagem: mensagem
+		             }
+			sendEmail(data);
+			this.resetForm();
 		}
 	}
+    
+
 
     render() {
+    	 
         return (
             <div id="contato" style={{marginBottom: 300, marginTop: 600}}>
             	<Typography component="h2" variant="display3" color="inherit">
@@ -96,9 +131,9 @@ class Contato extends Component {
 	            	  <DialogContent>
 	            	    <DialogContentText id="alert-dialog-slide-description">
 	            	      
-	            	    	<form id="contatoForm" noValidate autoComplete="off" style={{display:'flex', flexDirection:'column'}} 
-	            	    	method="post" action={process.env.PUBLIC_URL + "/controllers/controllerForm.php"}>
+	            	    	<form id="contatoForm" noValidate autoComplete="off" style={{display:'flex', flexDirection:'column'}} >
 			        			<TextField
+			        				id="nome"
 									name="nome"
 									label="Nome"
 									value={this.state.nome}
@@ -107,6 +142,7 @@ class Contato extends Component {
 									/>
 
 									<TextField
+									id="email"
 									name="email"
 									label="Email"
 									value={this.state.email}
@@ -115,6 +151,7 @@ class Contato extends Component {
 									/>
 
 									<TextField
+									id="tel"
 									name="tel"
 									label="Telefone"
 									value={this.state.tel}
@@ -125,6 +162,7 @@ class Contato extends Component {
 
 									<TextField
 									name="empresa"
+									id="empresa"
 									label="Empresa"
 									value={this.state.empresa}
 									onChange={this.handleChange('empresa')}
@@ -134,6 +172,7 @@ class Contato extends Component {
 									<TextField
 									multiline
 									rowsMax="5"
+									id="mensagem"
 									name="mensagem"
 									label="Mensagem"
 									value={this.state.mensagem}
