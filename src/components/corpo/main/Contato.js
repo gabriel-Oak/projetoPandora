@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import MaskedInput from 'react-text-mask';
 
 import axios from 'axios';
 
-import ErrorSnack from './ErrorSnack';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -13,7 +14,50 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import Typography from '@material-ui/core/Typography';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import ErrorIcon from '@material-ui/icons/Error';
+import InfoIcon from '@material-ui/icons/Info';
+import CloseIcon from '@material-ui/icons/Close';
+import green from '@material-ui/core/colors/green';
+import amber from '@material-ui/core/colors/amber';
+import IconButton from '@material-ui/core/IconButton';
+import Snackbar from '@material-ui/core/Snackbar';
+import SnackbarContent from '@material-ui/core/SnackbarContent';
+import WarningIcon from '@material-ui/icons/Warning';
+import { withStyles } from '@material-ui/core/styles';
 
+const variantIcon = {
+  success: CheckCircleIcon,
+  warning: WarningIcon,
+  error: ErrorIcon,
+  info: InfoIcon,
+};
+
+const styles1 = theme => ({
+  success: {
+    backgroundColor: green[600],
+  },
+  error: {
+    backgroundColor: theme.palette.error.dark,
+  },
+  info: {
+    backgroundColor: theme.palette.primary.dark,
+  },
+  warning: {
+    backgroundColor: amber[700],
+  },
+  icon: {
+    fontSize: 20,
+  },
+  iconVariant: {
+    opacity: 0.9,
+    marginRight: theme.spacing.unit,
+  },
+  message: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+});
 
 function preenchido(value) {
 	if (value != '' && value != null) {
@@ -24,7 +68,7 @@ function preenchido(value) {
 }
 
 function isEmail(value) {
-  if (!/@/g.test(value) || !/.com/g.test(value)) {
+  if (!/@/g.test(value)) {
     return false;
   } else if (preenchido(value)){return true;}
  return false;
@@ -46,6 +90,45 @@ function TextMaskCustom(props) {
   );
 }
 
+function MySnackbarContent(props) {
+  const { classes, className, message, onClose, variant, ...other } = props;
+  const Icon = variantIcon[variant];
+
+  return (
+    <SnackbarContent
+      className={classNames(classes[variant], className)}
+      aria-describedby="client-snackbar"
+      message={
+        <span id="client-snackbar" className={classes.message}>
+          <Icon className={classNames(classes.icon, classes.iconVariant)} />
+          {message}
+        </span>
+      }
+      action={[
+        <IconButton
+          key="close"
+          aria-label="Close"
+          color="inherit"
+          className={classes.close}
+          onClick={onClose}
+        >
+          <CloseIcon className={classes.icon} />
+        </IconButton>,
+      ]}
+      {...other}
+    />
+  );
+}
+
+MySnackbarContent.propTypes = {
+  classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
+  message: PropTypes.node,
+  onClose: PropTypes.func,
+  variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired,
+};
+
+const MySnackbarContentWrapper = withStyles(styles1)(MySnackbarContent);
 
 function Transition(props) {
   return <Slide direction="up" {...props} />;
@@ -73,6 +156,7 @@ class Contato extends Component {
     	empresa: '',
     	mensagem: '',
     	tel: '( )    -     ',
+    	alerta: 'Erro com o formulário'
 };
 
 	resetForm(){
@@ -84,6 +168,8 @@ class Contato extends Component {
 	    	empresa: '',
 	    	mensagem: '',
 	    	tel: '( )    -     ',
+	    	alerta: 'Erro com o formulário'
+
     	});
     }
 
@@ -124,14 +210,20 @@ class Contato extends Component {
 						 				 }
 							sendEmail(data);
 							this.resetForm();
-						} else{alert("Mensagem Vazia!");}
-					} else{alert("Qual é a empresa?");}
-				} else{alert("Informe um numero telefônico!");}
-			} else{alert("Email invalido!");}
-		} else{alert("Nome não preenchido!"); this.setState({ erro: true });}
+						} else{ this.setState({ erro: true, alerta: 'Mensagem vazia!' });}
+					} else{ this.setState({ erro: true, alerta: 'Qual a empresa?' });}
+				} else{ this.setState({ erro: true,alerta: 'Informe um telefone!' });}
+			} else{ this.setState({ erro: true, alerta: 'Email invalido!' });}
+		} else{ this.setState({ erro: true, alerta: 'Nome não preenchido!' });}
 	}
     
+	handleCloseS = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
 
+    this.setState({ erro: false });
+  };
 
     render() {
     	 
@@ -162,7 +254,24 @@ class Contato extends Component {
 	            	    <DialogContentText id="alert-dialog-slide-description">
 	            	      
 	            	    	<form id="contatoForm" noValidate autoComplete="off" style={{display:'flex', flexDirection:'column'}} >
-			        			<ErrorSnack estado={this.state.erro}/>
+
+	            	    		 <Snackbar
+						          anchorOrigin={{
+						            vertical: 'bottom',
+						            horizontal: 'left',
+						          }}
+						          open={this.state.erro}
+						          autoHideDuration={18000}
+						          onClose={this.handleCloseS}
+						        >
+						          <MySnackbarContentWrapper
+						            onClose={this.handleCloseS}
+						            variant="error"
+						            message={this.state.alerta}
+						          />
+						        </Snackbar>
+
+
 			        			<TextField
 			        				id="nome"
 									name="nome"
