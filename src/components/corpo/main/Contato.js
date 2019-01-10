@@ -134,16 +134,7 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-function sendEmail(data){
-		
-	 	axios.post('https://mailer-pandora.herokuapp.com/send',data).then((response)=>{
-            if (response.data.msg === 'success'){
-                alert("Sua mensagem foi enviada"); 
-            }else if(response.data.msg === 'fail'){
-                alert("Oops alguma coisa deu errado ao enviar!")
-            }
-        });
-	}
+ 
 
 
 class Contato extends Component {
@@ -156,7 +147,8 @@ class Contato extends Component {
     	empresa: '',
     	mensagem: '',
     	tel: '( )    -     ',
-    	alerta: 'Erro com o formulário'
+    	alerta: 'Erro com o formulário',
+    	variant: 'error'
 };
 
 	resetForm(){
@@ -168,8 +160,8 @@ class Contato extends Component {
 	    	empresa: '',
 	    	mensagem: '',
 	    	tel: '( )    -     ',
-	    	alerta: 'Erro com o formulário'
-
+	    	alerta: 'Erro com o formulário',
+	    	variant: 'error'
     	});
     }
 
@@ -187,7 +179,16 @@ class Contato extends Component {
 		this.setState({ open: false });
 	};
 
-	
+	sendEmail(data){
+		
+	 	axios.post('https://mailer-pandora.herokuapp.com/send',data).then((response)=>{
+            if (response.data.msg === 'success'){
+                this.setState({ variant: 'success', erro: true, alerta: 'Recebemos sua mensagem <3'  });
+            }else if(response.data.msg === 'fail'){
+                this.setState({ erro: true, alerta: 'Oops alguma coisa deu errado :(', variant: 'error' });
+            }
+        });
+	}
 
 	validateForm = () => {
 		const nome = document.getElementById('nome').value;
@@ -208,13 +209,13 @@ class Contato extends Component {
 							                emp: emp,
 							                mensagem: mensagem
 						 				 }
-							sendEmail(data);
+							this.sendEmail(data);
 							this.resetForm();
-						} else{ this.setState({ erro: true, alerta: 'Mensagem vazia!' });}
-					} else{ this.setState({ erro: true, alerta: 'Qual a empresa?' });}
-				} else{ this.setState({ erro: true,alerta: 'Informe um telefone!' });}
-			} else{ this.setState({ erro: true, alerta: 'Email invalido!' });}
-		} else{ this.setState({ erro: true, alerta: 'Nome não preenchido!' });}
+						} else{ this.setState({ erro: true, alerta: 'Mensagem vazia!', variant: 'error' });}
+					} else{ this.setState({ erro: true, alerta: 'Qual a empresa?', variant: 'error' });}
+				} else{ this.setState({ erro: true,alerta: 'Informe um telefone!', variant: 'error' });}
+			} else{ this.setState({ erro: true, alerta: 'Email invalido!', variant: 'error' });}
+		} else{ this.setState({ erro: true, alerta: 'Nome não preenchido!', variant: 'error' });}
 	}
     
 	handleCloseS = (event, reason) => {
@@ -230,13 +231,30 @@ class Contato extends Component {
         return (
             <div id="contato" style={{marginBottom: 300, marginTop: 600}}>
             	<Typography component="h2" variant="display3" color="inherit">
-		          Entre em contato conosco
+		          Entre em contato
 		        </Typography>
 
 
       	    	<Button size="large" style={{marginBottom: 20, marginLeft:'auto', marginRight:'auto', marginTop: 20}} variant="outlined" color="primary" onClick={this.handleClickOpen}>
             	  Clique para nos contatar
             	</Button>
+
+
+	    		 <Snackbar
+		          anchorOrigin={{
+		            vertical: 'bottom',
+		            horizontal: 'left',
+		          }}
+		          open={this.state.erro}
+		          autoHideDuration={18000}
+		          onClose={this.handleCloseS}
+		        	>
+		          <MySnackbarContentWrapper
+		            onClose={this.handleCloseS}
+		            variant={this.state.variant}
+		            message={this.state.alerta}
+		          />
+		        </Snackbar>
 
 
             	<Dialog
@@ -254,23 +272,6 @@ class Contato extends Component {
 	            	    <DialogContentText id="alert-dialog-slide-description">
 	            	      
 	            	    	<form id="contatoForm" noValidate autoComplete="off" style={{display:'flex', flexDirection:'column'}} >
-
-	            	    		 <Snackbar
-						          anchorOrigin={{
-						            vertical: 'bottom',
-						            horizontal: 'left',
-						          }}
-						          open={this.state.erro}
-						          autoHideDuration={18000}
-						          onClose={this.handleCloseS}
-						        >
-						          <MySnackbarContentWrapper
-						            onClose={this.handleCloseS}
-						            variant="error"
-						            message={this.state.alerta}
-						          />
-						        </Snackbar>
-
 
 			        			<TextField
 			        				id="nome"
