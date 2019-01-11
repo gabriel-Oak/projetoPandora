@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
+import ArrowNavs from './../../small/ArrowNavs';
 
 
 
@@ -9,6 +10,13 @@ class Sobre extends Component {
     render() {
         return (
             <div id="sobre" style={this.props.styles.Divs}>
+            	
+	            <div style={{"margin-bottom":"50px"}}>
+	            	<ArrowNavs direction={"top"} 
+	                               link={"#servicos"}
+	                               offset={'100'}/>
+            	</div>
+
             	<div className="titulo">
             	<Typography style={this.props.styles.Typography} component="h2" variant="display3" color="inherit">
 		           Um pouco sobre nos...
@@ -28,6 +36,12 @@ class Sobre extends Component {
 		          		para com o cliente, nosa visão (onde
 		          		queremos chegar), e nossos valores.</p>
 		        </Typography>
+            	</div>
+
+            	<div style={{"margin-top":"50px"}}>
+	            	<ArrowNavs direction={"bot"} 
+	                               link={"#contato"}
+	                               offset={'200'}/>
             	</div>
             </div>
         );

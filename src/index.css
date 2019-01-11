@@ -34,6 +34,53 @@ body {
 	flex-direction: column;
 }
 
+@keyframes arrow-bot {
+  from {top: 0px;}
+  to {top: 30px;}
+}
+
+@keyframes arrow-top {
+  from {top: 0px;}
+  to {top: -30px;}
+}
+
+.arrow-bot{
+		text-align: center;
+		position: relative;
+		display: block;
+
+	}
+		#botf{
+			position: absolute;
+		}
+		#bots{
+			position: absolute;
+			animation-name: arrow-bot;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+
+
+.arrow-top{
+		text-align: center;
+		position: relative;
+
+	}
+		#topf{
+			position: absolute;
+			transform: rotate(180deg);
+		}
+		#tops{
+			transform: rotate(180deg);
+			position: absolute;
+			animation-name: arrow-top;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+
+
+
+
 @media screen and (max-width: 480px){
 	.app{
 		display: flex;
@@ -114,7 +161,7 @@ body {
 	.textoDireita {
 		text-align: justify;
 		text-indent: 30px;
-		margin: 0 20px;
+		padding: 20px;
 	}
 
 	.footer{
@@ -196,7 +243,7 @@ body {
 	.textoDireita {
 		text-align: justify;
 		text-indent: 50px;
-		margin-left: 0 20px;
+		padding: 20px;
 	}
 
 		.header{background: #F0F0F0;  padding: 15px; height: 150px;}
@@ -357,7 +404,7 @@ body {
 		width: 50%;
 		text-align: justify;
 		text-indent: 50px;
-		margin-right: 10px;
+		margin-left: 48%;
 	}
 
 		.footer{
@@ -500,12 +547,14 @@ body {
 		width: 50%;
 		text-align: justify;
 		text-indent: 50px;
-		margin-right: 10px;
+		margin-left: 48%;
 	}
 
 	.footer{
 		background-color: #222;
 		height: 150px;
 	}
+
+	
 
 }

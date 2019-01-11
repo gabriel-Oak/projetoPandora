@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Typography from '@material-ui/core/Typography';
-
+import ArrowNavs from './../../small/ArrowNavs';
 class Servicos extends Component {
     
 
     render() {
         return (
             <div id="servicos" style={this.props.styles.Divs}>
+	            <div style={{"margin-bottom":"50px"}}>
+	            	<ArrowNavs direction={"top"} 
+	                               link={"#inicio"}
+	                               offset={'0'}/>
+            	</div>
             	<div className="titulo">
             	<Typography style={this.props.styles.Typography} component="h2" variant="display3" color="inherit">
 		           Fazemos por você
@@ -22,6 +27,12 @@ class Servicos extends Component {
 		          	de nossos clientes.
 		          </p>
 		        </Typography>
+            	</div>
+
+            	<div style={{"margin-top":"50px"}}>
+	            	<ArrowNavs direction={"bot"} 
+	                               link={"#sobre"}
+	                               offset={'100'}/>
             	</div>
             </div>
         );

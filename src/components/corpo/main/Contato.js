@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import MaskedInput from 'react-text-mask';
+import ArrowNavs from './../../small/ArrowNavs';
 
 import axios from 'axios';
 
@@ -185,7 +186,7 @@ class Contato extends Component {
             if (response.data.msg === 'success'){
                 this.setState({ variant: 'success', erro: true, alerta: 'Recebemos sua mensagem <3'  });
             }else if(response.data.msg === 'fail'){
-                this.setState({ erro: true, alerta: 'Oops alguma coisa deu errado :(', variant: 'error' });
+                this.setState({ erro: true, alerta: 'Oops alguma coisa deu errado :(', variant: 'warning' });
             }
         });
 	}
@@ -230,6 +231,13 @@ class Contato extends Component {
     	 
         return (
             <div id="contato" style={{marginBottom: 300, marginTop: 600}}>
+            	
+	            <div style={{"margin-bottom":"50px"}}>
+	            	<ArrowNavs direction={"top"} 
+	                               link={"#sobre"}
+	                               offset={'100'}/>
+            	</div>
+
             	<Typography component="h2" variant="display3" color="inherit">
 		          Entre em contato
 		        </Typography>
