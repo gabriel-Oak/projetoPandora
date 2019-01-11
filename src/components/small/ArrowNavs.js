@@ -5,7 +5,7 @@ class ArrowNavs extends Component {
 
     render() {
         return (
-            <div style={{height:1, "width":"90%"}}>
+            <div style={{height:1, "width":"100%"}}>
 	            <div className={"arrow-" + this.props.direction}>	
 				  <AnchorLink href={this.props.link} offset={() => this.props.offset}>         	
 	            	<img src={process.env.PUBLIC_URL + "/img/arrow.png"} id={this.props.direction + "f"} />

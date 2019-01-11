@@ -10,9 +10,9 @@ class Menu extends Component {
             	
             	<div className="navs">
             		<AnchorLink href='#inicio' className="mlink">Inicio</AnchorLink>
-                    <AnchorLink href='#servicos' offset={() => 100} className="mlink">Por Você</AnchorLink>
-            		<AnchorLink href='#sobre' offset={() => 100} className="mlink">Sobre Nós</AnchorLink>
-            		<AnchorLink href="#contato" offset={() => 200} className="mlink">Contato</AnchorLink>
+                    <AnchorLink href='#servicos' offset={() => 25} className="mlink">Por Você</AnchorLink>
+            		<AnchorLink href='#sobre' offset={() => 25} className="mlink">Sobre Nós</AnchorLink>
+            		<AnchorLink href="#contato" offset={() => 70} className="mlink">Contato</AnchorLink>
             	</div>
             </div>
         );

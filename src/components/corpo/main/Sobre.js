@@ -14,7 +14,7 @@ class Sobre extends Component {
 	            <div style={{"margin-bottom":"50px"}}>
 	            	<ArrowNavs direction={"top"} 
 	                               link={"#servicos"}
-	                               offset={'100'}/>
+	                               offset={'25'}/>
             	</div>
 
             	<div className="titulo">
@@ -41,7 +41,7 @@ class Sobre extends Component {
             	<div style={{"margin-top":"50px"}}>
 	            	<ArrowNavs direction={"bot"} 
 	                               link={"#contato"}
-	                               offset={'200'}/>
+	                               offset={'70'}/>
             	</div>
             </div>
         );

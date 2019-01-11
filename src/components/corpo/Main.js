@@ -12,7 +12,7 @@ const styles = {
     },
 
     Divs:{
-        marginTop: 600,
+        marginTop: 700,
         display: 'flex',
         flexDirection: 'column'
     }

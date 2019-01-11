@@ -32,7 +32,7 @@ class Servicos extends Component {
             	<div style={{"margin-top":"50px"}}>
 	            	<ArrowNavs direction={"bot"} 
 	                               link={"#sobre"}
-	                               offset={'100'}/>
+	                               offset={'25'}/>
             	</div>
             </div>
         );

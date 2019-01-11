@@ -80,7 +80,6 @@ body {
 
 
 
-
 @media screen and (max-width: 480px){
 	.app{
 		display: flex;
@@ -167,8 +166,30 @@ body {
 	.footer{
 		margin-top: -100px;
 		height: 100px;
+		display: block;
 		background-color: #222;
 	}
+	.left{
+			display: none;
+		}
+
+		.right{
+			float: right;
+			text-align: right;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.footer h3{
+			margin-bottom: auto;
+			margin-top: auto;
+			height: 45px;
+			margin-right: 20px;
+		}
+		.footer a{
+			height: 60px;
+			margin: auto 10px;
+		}
 
 
 }
@@ -265,9 +286,31 @@ body {
 			text-align: justify;
 		}
 			.footer{
-		height: 150px;
 		background-color: #222;
-	}
+		height: 150px;
+		padding: 10px;
+	}	
+		.left{
+			display: none;
+		}
+
+		.right{
+			float: right;
+			text-align: right;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.footer h3{
+			margin-bottom: auto;
+			margin-top: auto;
+			height: 45px;
+			margin-right: 20px;
+		}
+		.footer a{
+			height: 60px;
+			margin: auto 10px;
+		}
 
 
 }
@@ -408,9 +451,49 @@ body {
 	}
 
 		.footer{
-		height: 150px;
 		background-color: #222;
-	}
+		height: 150px;
+		padding: 10px;
+	}	
+		.right{
+			float: right;
+			text-align: right;
+			margin-right: 10px;
+			margin-left: auto;
+		}
+
+		.footer h3{
+			margin-bottom: auto;
+			margin-top: auto;
+			height: 40px;
+			margin-right: 20px;
+		}
+		.footer a{
+			height: 60px;
+			margin: auto 10px;
+		}
+		.footer{
+		background-color: #222;
+		height: 150px;
+		padding: 10px;
+	}	
+		.right{
+			float: right;
+			text-align: right;
+			margin-right: 10px;
+			margin-left: auto;
+		}
+
+		.footer h3{
+			margin-bottom: auto;
+			margin-top: auto;
+			height: 45px;
+			margin-right: 20px;
+		}
+		.footer a{
+			height: 60px;
+			margin: auto 10px;
+		}
 
 }
 
@@ -553,7 +636,25 @@ body {
 	.footer{
 		background-color: #222;
 		height: 150px;
-	}
+		padding: 10px;
+	}	
+		.right{
+			float: right;
+			text-align: right;
+			margin-right: 10px;
+			margin-left: auto;
+		}
+
+		.footer h3{
+			margin-bottom: auto;
+			margin-top: auto;
+			height: 40px;
+			margin-right: 20px;
+		}
+		.footer a{
+			height: 60px;
+			margin: auto 10px;
+		}
 
 	
 

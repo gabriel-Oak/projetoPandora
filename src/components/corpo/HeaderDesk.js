@@ -32,7 +32,7 @@ class HeaderDesk extends Component {
                 <div style={{"margin-top":"-150px"}}>
                     <ArrowNavs direction={"bot"} 
                                link={"#servicos"}
-                               offset={'100'}/>
+                               offset={'25'}/>
                 </div>
             </div>
         );

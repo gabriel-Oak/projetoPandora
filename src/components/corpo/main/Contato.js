@@ -235,7 +235,7 @@ class Contato extends Component {
 	            <div style={{"margin-bottom":"50px"}}>
 	            	<ArrowNavs direction={"top"} 
 	                               link={"#sobre"}
-	                               offset={'100'}/>
+	                               offset={'25'}/>
             	</div>
 
             	<Typography component="h2" variant="display3" color="inherit">
