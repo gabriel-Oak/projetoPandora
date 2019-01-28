@@ -11,6 +11,11 @@ body {
   background: #111;
 }
 
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+
 .mlink{
 	text-decoration: none;
 	color: white;
@@ -174,10 +179,7 @@ body {
 		}
 
 		.right{
-			float: right;
-			text-align: right;
-			margin-right: auto;
-			margin-left: auto;
+			flex-direction: column;
 		}
 
 		.footer h3{
@@ -185,10 +187,25 @@ body {
 			margin-top: auto;
 			height: 45px;
 			margin-right: 20px;
+			font-size: 20px;
 		}
 		.footer a{
 			height: 60px;
 			margin: auto 10px;
+		}
+
+		.footer img{
+			width: 35px;
+			height: 35px;
+		}
+		.imagesF{
+			width: 165px;
+			margin: auto;
+		}
+		.textoF{
+			margin-top: 10px;
+			margin-left: 10px;
+
 		}
 
 
@@ -289,6 +306,8 @@ body {
 		background-color: #222;
 		height: 150px;
 		padding: 10px;
+		flex-direction: row;
+		display: flex;
 	}	
 		.left{
 			display: none;
@@ -297,13 +316,14 @@ body {
 		.right{
 			float: right;
 			text-align: right;
-			margin-right: auto;
-			margin-left: auto;
+			margin: auto;
+			flex-direction: row;
+			display: flex;
+			height: 80px;
 		}
 
 		.footer h3{
-			margin-bottom: auto;
-			margin-top: auto;
+			margin-top: 15px;
 			height: 45px;
 			margin-right: 20px;
 		}
@@ -454,6 +474,8 @@ body {
 		background-color: #222;
 		height: 150px;
 		padding: 10px;
+		flex-direction: row;
+		display: flex;
 	}	
 		.right{
 			float: right;
@@ -482,11 +504,15 @@ body {
 			text-align: right;
 			margin-right: 10px;
 			margin-left: auto;
+			flex-direction: row;
+			margin-top: auto;
+			margin-bottom: auto;
+			display: flex;
+			height: 80px;
 		}
 
 		.footer h3{
-			margin-bottom: auto;
-			margin-top: auto;
+			margin-top: 15px;
 			height: 45px;
 			margin-right: 20px;
 		}
@@ -637,17 +663,23 @@ body {
 		background-color: #222;
 		height: 150px;
 		padding: 10px;
+		flex-direction: row;
+		display: flex;
 	}	
 		.right{
 			float: right;
 			text-align: right;
 			margin-right: 10px;
 			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			flex-direction: row;
+			display: flex;
+			height: 80px;
 		}
 
 		.footer h3{
-			margin-bottom: auto;
-			margin-top: auto;
+			margin-top: 15px;
 			height: 40px;
 			margin-right: 20px;
 		}
@@ -656,6 +688,20 @@ body {
 			margin: auto 10px;
 		}
 
-	
+		.vantagens{
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}	
+
+		.vantagensItem{
+			width: 30%;
+			margin: 15px 0;
+			box-shadow: 0 5px 20px #222;
+			text-align: center;
+			padding: 15px;
+		}
 
 }

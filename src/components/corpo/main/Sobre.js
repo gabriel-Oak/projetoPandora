@@ -19,22 +19,36 @@ class Sobre extends Component {
 
             	<div className="titulo">
             	<Typography style={this.props.styles.Typography} component="h2" variant="display3" color="inherit">
-		           Um pouco sobre nos...
+		           Um pouco sobre nós...
 		        </Typography>
 		        </div>
 		        
 		        <div className="textoEsquerda">
 		        <Typography variant="h5" color="inherit" gutterBottom>
-		          <p>Um texto enorme contando sobre a historia
-		          		da agência,  como ela surgiu, de onde
-		          		veio a iniciativa, e sobre o processo 
-		          		de encubação, posteriormente essa seção
-		          		pode ser espandida para abranger melhor
-		          		a tragetoria da empresa.</p>
-		          <p>Vale a pena ja falar sobre os objetivos
-		          		nessa seção também, qual nossa meta
-		          		para com o cliente, nosa visão (onde
-		          		queremos chegar), e nossos valores.</p>
+		          <p>Nossa agência nasceu do amor e 
+			          proposito que havia dentro da gente. 
+			          Estudantes de computação totalmente 
+			          apaixonados pelo marketing, ajudando 
+			          pessoas próximas com isso viamos cada 
+			          vez mais esse amor crescer e vimos a 
+			          possibilidade de ajudar cada vez mais 
+			          pessoas a crescerem através do marketing 
+			          digital, social media e etc. E isso 
+			          nos empolgou porque entre nossos 
+			          valores está o comprometimento, 
+			          produtividade, étic
+			          a sempre levando a resultados, 
+			          crescimento e sucesso dos nossos 
+			          clientes.</p>
+		          <p>Temos uma missão e não vamos parar 
+			          até vocês, nossos clientes, a atingirem. 
+			          Somos comprometidos com conteúdos para 
+			          alavancar e posicionar sua marca nas 
+			          redes sociais com engajamento 
+			          profissional, seja você um empreendedor 
+			          ou influenciador digital, vamos dar 
+			          a visibilidade na internet que você m
+			          erece.</p>
 		        </Typography>
             	</div>
 
