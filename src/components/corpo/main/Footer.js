@@ -17,14 +17,14 @@ class Footer extends Component {
 	            	<h3> Vem com a gente </h3>
 	            	</div>
 	            	<div className="imagesF">
-	            	<a href="https://www.facebook.com/" target="_blank">
+	            	<a href="https://www.facebook.com/agenciapandoramarketing/" target="_blank">
 	            	<picture>
 	            		<source media="(max-width: 859)" srcSet={process.env.PUBLIC_URL + "/img/face-sm.png"}/>
 	            		<img src={process.env.PUBLIC_URL + "/img/face-md.png"} alt="Facebook"/>
 	            	</picture>
 	            	</a>
 
-	            	<a href="https://www.instagram.com/" target="_blank">
+	            	<a href="https://www.instagram.com/agenciapandora/" target="_blank">
 	            	<picture>
 	            		<source media="(max-width: 859)" srcSet={process.env.PUBLIC_URL + "/img/instagram-sm.png"}/>
 	            		<img src={process.env.PUBLIC_URL + "/img/instagram-md.png"} alt="Instagram"/>

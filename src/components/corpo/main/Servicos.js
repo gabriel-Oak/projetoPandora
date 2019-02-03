@@ -24,7 +24,7 @@ class Servicos extends Component {
 		          	Somos movidos por desafios, e entregar resultados
 		          	positivos aos nossos clientes nos alimenta.
 		          	Cuidamos de social media, consultoria de e-commerce,
-		          	e Web Designer.
+		          	e Web Design.
 		          </p>
 		        </Typography>
             	</div>
@@ -32,42 +32,57 @@ class Servicos extends Component {
             	<div className="vantagens">
             		<div className="vantagensItem">
             			<div className="vantagensItemT">
-            				Titulo
+            				Basico
             			</div>
             			<div className="vantagensItemt">
             				<ul>
-            					<li> Item 1 </li>
-            					<li> Item 2 </li>
-            					<li> Item 3 </li>
-            					<li> Item 4 </li>
+            					<li> Criação de páginas </li>
+            					<li> Estruturação de facebook e instagram </li>
+            					<li> 3 posts semanais </li>
+            					<li> 3 stories semanais </li>
+            					<li> Atendimento 2.0 </li>
+            					<li> O cliente deve dispoilizar as imagens/videos e conteúdo específico </li>
+            					<li> Gestão de 1 anúncio </li>
+            					<li> Relatório de resultados mensal </li>
             				</ul>
             			</div>
             		</div>
 
             		<div className="vantagensItem">
             			<div className="vantagensItemT">
-            				Titulo
+            				Startup
             			</div>
             			<div className="vantagensItemt">
             				<ul>
-            					<li> Item 1 </li>
-            					<li> Item 2 </li>
-            					<li> Item 3 </li>
-            					<li> Item 4 </li>
+            					<li> Criação de páginas </li>
+            					<li> Estruturação de facebook e instagram </li>
+            					<li> 5 posts semanais </li>
+            					<li> 3 stories semanais </li>
+            					<li> Atendimento 2.0 </li>
+            					<li> Respostas ao cliente </li>
+            					<li> O cliente deve dispoilizar as imagens/videos e conteúdo específico </li>
+            					<li> Gestão de 1 anúncio </li>
+            					<li> Relatório de resultados mensal </li>
             				</ul>
             			</div>
             		</div>
 
             		<div className="vantagensItem">
             			<div className="vantagensItemT">
-            				Titulo
+            				Enterprise
             			</div>
             			<div className="vantagensItemt">
             				<ul>
-            					<li> Item 1 </li>
-            					<li> Item 2 </li>
-            					<li> Item 3 </li>
-            					<li> Item 4 </li>
+            					<li> Criação de páginas </li>
+            					<li> Estruturação de facebook e instagram </li>
+            					<li> 5 posts semanais </li>
+            					<li> 5 stories semanais </li>
+            					<li> Atendimento 2.0 </li>
+            					<li> Branding </li>
+            					<li> Respostas ao cliente </li>
+            					<li> O cliente deve dispoilizar as imagens/videos e conteúdo específico </li>
+            					<li> Gestão de 1 anúncio </li>
+            					<li> Relatório de resultados mensal </li>
             				</ul>
             			</div>
 

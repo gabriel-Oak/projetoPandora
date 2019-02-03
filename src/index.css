@@ -208,6 +208,41 @@ ul{
 
 		}
 
+	.vantagens{
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin-top: 40px;
+		}	
+
+		.vantagensItem{
+			background-color: #131313;
+			width: 80%;
+			margin: 15px 0;
+			margin-bottom: 50px;
+			box-shadow: 0 5px 20px #222;
+			text-align: center;
+			padding: 15px;
+			border-radius: 10px;
+
+		}
+
+		.vantagensItemT {
+			font-size: 50px;
+			font-family: 'Roboto', sans-serif;
+			margin-bottom: 30px;
+
+		}
+
+		.vantagensItemt{
+			font-size: 20px;
+			font-family: 'Roboto', sans-serif;
+		}
+			.vantagensItemt li{
+				margin-bottom: 15px;
+			}
 
 }
 
@@ -332,6 +367,41 @@ ul{
 			margin: auto 10px;
 		}
 
+	.vantagens{
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin-top: 40px;
+		}	
+
+		.vantagensItem{
+			background-color: #131313;
+			width: 80%;
+			margin: 15px 0;
+			margin-bottom: 50px;
+			box-shadow: 0 5px 20px #222;
+			text-align: center;
+			padding: 15px;
+			border-radius: 10px;
+
+		}
+
+		.vantagensItemT {
+			font-size: 50px;
+			font-family: 'Roboto', sans-serif;
+			margin-bottom: 30px;
+
+		}
+
+		.vantagensItemt{
+			font-size: 30px;
+			font-family: 'Roboto', sans-serif;
+		}
+			.vantagensItemt li{
+				margin-bottom: 13px;
+			}
 
 }
 
@@ -521,6 +591,41 @@ ul{
 			margin: auto 10px;
 		}
 
+	.vantagens{
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			margin-top: 40px;
+		}	
+
+		.vantagensItem{
+			background-color: #131313;
+			width: 30%;
+			margin: 15px 0;
+			box-shadow: 0 5px 20px #222;
+			text-align: center;
+			padding: 15px;
+			border-radius: 10px;
+
+		}
+
+		.vantagensItemT {
+			font-size: 30px;
+			font-family: 'Roboto', sans-serif;
+			margin-bottom: 30px;
+
+		}
+
+		.vantagensItemt{
+			font-size: 18px;
+			font-family: 'Roboto', sans-serif;
+		}
+			.vantagensItemt li{
+				margin-bottom: 13px;
+			}
+
 }
 
 @media screen and (min-width: 1201px) {
@@ -694,14 +799,33 @@ ul{
 			flex-direction: row;
 			justify-content: space-around;
 			flex-wrap: wrap;
+			margin-top: 40px;
 		}	
 
 		.vantagensItem{
+			background-color: #131313;
 			width: 30%;
 			margin: 15px 0;
 			box-shadow: 0 5px 20px #222;
 			text-align: center;
 			padding: 15px;
+			border-radius: 10px;
+
 		}
+
+		.vantagensItemT {
+			font-size: 30px;
+			font-family: 'Roboto', sans-serif;
+			margin-bottom: 30px;
+
+		}
+
+		.vantagensItemt{
+			font-size: 18px;
+			font-family: 'Roboto', sans-serif;
+		}
+			.vantagensItemt li{
+				margin-bottom: 13px;
+			}
 
 }
